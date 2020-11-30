@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "module": "esnext",
+      "moduleResolution": "node",   // 모듈 (검색)해석 방식 설정
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "downlevelIteration": false, // target이 ES3 및 ES5 일때도 for..of, spread, destructuring 문법 지원 - TypeScript 2.3 이전에는 target이 ES6/ES2015 이후 버전일때만 지원함
+      "experimentalDecorators": true, // ES Decorator에 대한 실험적 기능 사용 여부
+      "declaration": false,   // .d.ts 파일의 생성 여부
+      "baseUrl": "src",
+      "outDir": "dist",
+      "target": "es2017",
+      "strict": true,
+      "sourceMap": true,
+      "typeRoots": [
+        "node_modules/@types"
+      ],
+      "lib": [
+        "es2018",
+        "dom"
+      ],
+      "paths": {
+        "@root/*": [
+            "./*"
+        ]
+    }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "bower_components", "jspm_packages", "dist"]
+}
